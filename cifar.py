@@ -33,10 +33,13 @@ import numpy as np
 from third_party.ResNeXt_DenseNet.models.densenet import densenet
 from third_party.ResNeXt_DenseNet.models.resnext import resnext29
 from third_party.WideResNet_pytorch.wideresnet import WideResNet
-
 import torch
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
+
+import torch.utils.model_zoo as model_zoo
+from torchvision.models import resnet
+from torchvision.models import convnext_tiny
 from torchvision import datasets
 from torchvision import transforms
 
@@ -54,7 +57,7 @@ parser.add_argument(
     '-m',
     type=str,
     default='wrn',
-    choices=['wrn', 'allconv', 'densenet', 'resnext'],
+    choices=['wrn', 'allconv', 'densenet', 'resnext', 'resnet18', 'convnetxt_tiny'],
     help='Choose architecture.')
 # Optimization options
 parser.add_argument(
@@ -338,6 +341,16 @@ def main():
     net = AllConvNet(num_classes)
   elif args.model == 'resnext':
     net = resnext29(num_classes=num_classes)
+  elif args.model == 'resnet18':
+    net = resnet.resnet18()
+    #model = resnet.resnet18()
+    model_url = "https://download.pytorch.org/models/resnet18-5c106cde.pth"
+    net.load_state_dict(model_zoo.load_url(model_url))
+  elif args.model == 'convnetxt_tiny':
+    net = convnext_tiny()
+    #weights_url ="https://download.pytorch.org/models/convnext_tiny-983f1562.pth"
+    #net.load_state_dict(model_zoo.load_url(weights_url))
+    
 
   optimizer = torch.optim.SGD(
       net.parameters(),
