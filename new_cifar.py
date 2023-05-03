@@ -15,7 +15,7 @@
 """Main script to launch AugMix training on CIFAR-10/100.
 
 Supports WideResNet, AllConv, ResNeXt models on CIFAR-10 and CIFAR-100 as well
-as evaluation on CIFAR-10-C and CIFAR-100-C.
+as evaluation on CIFAR-10-C and CIFAR-100-C, CIFAR-10-P.
 
 Example usage:
   `python cifar.py`
@@ -27,6 +27,9 @@ import os
 import shutil
 import time
 
+from tqdm import tqdm
+from scipy.stats import rankdata
+
 import augmentations
 from models.cifar.allconv import AllConvNet
 import numpy as np
@@ -37,11 +40,13 @@ import torch
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 
+from tensorboardX import SummaryWriter
 import torch.utils.model_zoo as model_zoo
 from torchvision.models import resnet
-#from torchvision.models import convnext_tiny
+from timm.models import convnext_tiny
 from torchvision import datasets
 from torchvision import transforms
+from torch import nn
 
 parser = argparse.ArgumentParser(
     description='Trains a CIFAR Classifier',
@@ -57,8 +62,31 @@ parser.add_argument(
     '-m',
     type=str,
     default='wrn',
-    choices=['wrn', 'allconv', 'densenet', 'resnext', 'resnet18', 'convnetxt_tiny'],
+    choices=['wrn', 'allconv', 'densenet', 'resnext', 'resnet18', 'convnext_tiny'],
     help='Choose architecture.')
+    
+parser.add_argument(
+    '--scheduler',
+    '-s',
+    type =str,
+    default ='LambdaLR',
+    choices=['LambdaLR','CosineAnnealingLR'],
+    help='Switch between LambdaLR and CosineAnnealingLR')
+
+parser.add_argument(
+  '--optimiser',
+  '-o',
+  type=str,
+  default='SGD',
+  choices=['SGD', 'AdamW'],
+  help ='optimizer selection'
+)
+
+parser.add_argument(
+    '--pretrained',
+    '-pt',
+    action='store_true',
+    help='pretrained and non pretrained')
 # Optimization options
 parser.add_argument(
     '--epochs', '-e', type=int, default=100, help='Number of epochs to train.')
@@ -113,10 +141,10 @@ parser.add_argument(
 # Checkpointing options
 parser.add_argument(
     '--save',
-    '-s',
     type=str,
-    default='./snapshots',
+    default='./snapshots/Cifar_10p_AdamW_CAlr_convnext_tiny_nPtr',
     help='Folder to save checkpoints.')
+
 parser.add_argument(
     '--resume',
     '-r',
@@ -131,7 +159,7 @@ parser.add_argument(
     help='Training loss print frequency (batches).')
 # Acceleration
 parser.add_argument(
- #   '--num-workers',
+    '--num-workers',
     type=int,
     default=4,
     help='Number of pre-fetching threads.')
@@ -293,38 +321,124 @@ def test_c(net, test_data, base_path):
 
   return np.mean(corruption_accs)
 
-def test_p(net, test_data, base_path):
-  """Evaluate network on given corrupted dataset."""
-  perturbation_accs = []
-  for perturbation in PERTURBATIONS:
-    # Reference to original data is mutated
-    test_data.data = np.load(base_path + perturbation + '.npy')
-    print(test_data.data.shape)
-    # Remove the first dimension of size 31
-    test_data.data = np.mean(test_data.data, axis=1)
-    test_data.data = np.random.random_sample(test_data.data.shape) * 255
-    test_data.data = test_data.data.astype(np.uint8)
-    print(test_data.data.shape)
 
-    test_data.targets = torch.LongTensor(np.load(base_path + 'labels.npy'))
+def dist(num_classes,sigma, mode='top5'):
 
-    test_loader = torch.utils.data.DataLoader(
-        test_data,
-        batch_size=args.eval_batch_size,
-        shuffle=False,
-        num_workers=args.num_workers,
-        pin_memory=True)
+  identity = np.asarray(range(1, num_classes + 1))
+  cum_sum_top5 = np.cumsum(np.asarray([0] + [1] * 5 + [0] * (num_classes-1 - 5)))
+  recip = 1./identity
 
-    test_loss, test_acc = test(net, test_loader)
-    perturbation_accs.append(test_acc)
-    print('{}\n\tTest Loss {:.3f} | Test Error {:.3f}'.format(
-        perturbation, test_loss, 100 - 100. * test_acc))
+  if mode == 'top5':
+      return np.sum(np.abs(cum_sum_top5[:5] - cum_sum_top5[sigma-1][:5]))
+  elif mode == 'zipf':
+      return np.sum(np.abs(recip - recip[sigma-1])*recip)
 
-  return np.mean(perturbation_accs)
+
+def ranking_dist(num_cls,ranks, noise_perturbation=False, mode='top5'):
+
+    result = 0
+    args.difficulty = 1
+    step_size = 1 if noise_perturbation else args.difficulty
+
+    for vid_ranks in ranks:
+        result_for_vid = []
+
+        for i in range(step_size):
+            perm1 = vid_ranks[i]
+            perm1_inv = np.argsort(perm1)
+
+            for rank in vid_ranks[i::step_size][1:]:
+                perm2 = rank
+                result_for_vid.append(dist(num_cls, perm2[perm1_inv], mode))
+                if not noise_perturbation:
+                    perm1 = perm2
+                    perm1_inv = np.argsort(perm1)
+
+        result += np.mean(result_for_vid) / len(ranks)
+
+    return result
+
+
+def flip_prob(predictions, noise_perturbation=False):
+
+    result = 0
+    args.difficulty = 1
+    step_size = 1 if noise_perturbation else args.difficulty
+
+    for vid_preds in predictions:
+        result_for_vid = []
+
+        for i in range(step_size):
+            prev_pred = vid_preds[i]
+
+            for pred in vid_preds[i::step_size][1:]:
+                result_for_vid.append(int(prev_pred != pred))
+                if not noise_perturbation: prev_pred = pred
+
+        result += np.mean(result_for_vid) / len(predictions)
+
+    return result
+
+def pertrubation(num_classes, net, c_p_dir):
+
+  #pertrubation
+  dummy_targets = torch.LongTensor(np.random.randint(0, num_classes, (10000,)))
+
+  flip_list = []
+  zipf_list = []
+
+  for p in ['brightness','gaussian_blur', 'gaussian_noise',
+            'motion_blur','rotate','scale','shot_noise',
+            'snow','spatter','speckle_noise','tilt','translate','zoom_blur']:
+
+      dataset = torch.from_numpy(np.float32(np.load(os.path.join(c_p_dir, p + '.npy')).transpose((0,1,4,2,3))))/255.
+
+      ood_data = torch.utils.data.TensorDataset(dataset, dummy_targets)
+
+      loader = torch.utils.data.DataLoader(
+          dataset, batch_size=25, shuffle=False, num_workers=2, pin_memory=True)
+
+      predictions, ranks = [], []
+
+      with torch.no_grad():
+
+          for data in loader:
+              num_vids = data.size(0)
+              data = data.view(-1,3,32,32).cuda()
+
+              output = net(data * 2 - 1)
+
+              for vid in output.view(num_vids, -1, num_classes):
+                  predictions.append(vid.argmax(1).to('cpu').numpy())
+                  ranks.append([np.uint16(rankdata(-frame, method='ordinal')) for frame in vid.to('cpu').numpy()])
+
+          ranks = np.asarray(ranks)
+
+          # print('\nComputing Metrics for', p,)
+
+          current_flip = flip_prob(predictions, True if 'noise' in p else False)
+          current_zipf = ranking_dist(num_classes, ranks, True if 'noise' in p else False, mode='zipf')
+          flip_list.append(current_flip)
+          zipf_list.append(current_zipf)
+
+          print('\n' + p, 'Flipping Prob')
+          print(current_flip)
+          print('Top5 Distance\t{:.5f}'.format(ranking_dist(num_classes, ranks, True if 'noise' in p else False, mode='top5')))
+          print('Zipf Distance\t{:.5f}'.format(current_zipf))
+
+  print('flip_list', flip_list)
+  print('\nMean Flipping Prob\t{:.5f}'.format(np.mean(flip_list)))
+
 
 def main():
   torch.manual_seed(1)
   np.random.seed(1)
+
+
+  #pertrubation functions
+  num_classes = 10
+  if args.dataset == 'cifar100':
+    num_classes = 100  
 
   # Load datasets
   train_transform = transforms.Compose(
@@ -374,37 +488,55 @@ def main():
     net = WideResNet(args.layers, num_classes, args.widen_factor, args.droprate)
   elif args.model == 'allconv':
     net = AllConvNet(num_classes)
-    checkpoint = torch.load('snapshots/model_best.pth.tar')
-    net.load_state_dict(checkpoint['state_dict'], strict=False)
-
   elif args.model == 'resnext':
     net = resnext29(num_classes=num_classes)
   elif args.model == 'resnet18':
-    net = resnet.resnet18()
-    #model = resnet.resnet18()
-    #model_url = "https://download.pytorch.org/models/resnet18-5c106cde.pth"
-    #net.load_state_dict(model_zoo.load_url(model_url))
-    
-  elif args.model == 'convnetxt_tiny':
-    net = convnext_tiny()
-    checkpoint = torch.load('snapshots/model_best.pth.tar')
-    #weights_url ="https://download.pytorch.org/models/convnext_tiny-983f1562.pth"
-    net.load_state_dict(checkpoint['state_dict'], strict=False)
-    
+    if args.pretrained == False:
+      net = resnet.resnet18(num_classes = 10)
+    else:
+      net = resnet.resnet18(pretrained = args.pretrained)
+      net.fc = nn.Linear(in_features=net.fc.in_features, out_features=10,bias=True)
+    if torch.cuda.is_available():
+      net = torch.nn.DataParallel(net, device_ids = [0])
+      cudnn.benchmark = True
+      net.to(f'cuda:{net.device_ids[0]}')
+    # checkpoint = torch.load('snapshots/previous/resnet18_model_best.pth.tar')
+    # net.load_state_dict(checkpoint['state_dict'])
 
-  optimizer = torch.optim.SGD(
+  elif args.model == 'convnext_tiny':
+    if args.pretrained == False:
+      net = convnext_tiny(num_classes = 10)
+    else:
+      net =convnext_tiny(pretrained = args.pretrained, num_classes=10)
+    if torch.cuda.is_available():
+      net = torch.nn.DataParallel(net, device_ids = [0])
+      cudnn.benchmark = True
+      net.to(f'cuda:{net.device_ids[0]}')
+    # checkpoint = torch.load('snapshots/previous/convnext_model_best.pth.tar')
+    # net.load_state_dict(checkpoint['state_dict']) 
+    
+  if args.optimiser == 'SGD':
+    optimizer = torch.optim.SGD(
+        net.parameters(),
+        args.learning_rate,
+        momentum=args.momentum,
+        weight_decay=args.decay,
+        nesterov=True)
+  elif args.optimiser == 'AdamW':
+    optimizer = torch.optim.AdamW(
       net.parameters(),
-      args.learning_rate,
-      momentum=args.momentum,
-      weight_decay=args.decay,
-      nesterov=True)
-  
-  # Distribute model across all visible GPUs
-  net = torch.nn.DataParallel(net).cuda()
-  cudnn.benchmark = True
+      betas=(0.9, 0.999),
+      lr=args.learning_rate,
+      weight_decay =args.decay,
+      amsgrad=False)
+    
+    # Distribute model across all visible GPUs
+    net = torch.nn.DataParallel(net).cuda()
+    cudnn.benchmark = True
 
   start_epoch = 0
-
+  
+  e = False
   if args.resume:
     if os.path.isfile(args.resume):
       checkpoint = torch.load(args.resume)
@@ -413,6 +545,7 @@ def main():
       net.load_state_dict(checkpoint['state_dict'])
       optimizer.load_state_dict(checkpoint['optimizer'])
       print('Model restored from epoch:', start_epoch)
+      
 
   if args.evaluate:
     #Evaluate clean accuracy first because test_c mutates underlying data
@@ -423,80 +556,95 @@ def main():
     test_c_acc = test_c(net, test_data, base_c_path)
     print('Mean Corruption Error: {:.3f}'.format(100 - 100. * test_c_acc))
 
-    test_p_acc = test_p(net, test_data, base_p_path)
-    print('Mean peturbation Error: {:.3f}'.format(100 - 100. * test_p_acc))
-    return
 
-  scheduler = torch.optim.lr_scheduler.LambdaLR(
-      optimizer,
-      lr_lambda=lambda step: get_lr(  # pylint: disable=g-long-lambda
-          step,
-          args.epochs * len(train_loader),
-          1,  # lr_lambda computes multiplicative factor
-          1e-6 / args.learning_rate))
+    c_p_dir = './data/cifar/CIFAR-10-P'
 
-  if not os.path.exists(args.save):
-    os.makedirs(args.save)
-  if not os.path.isdir(args.save):
-    raise Exception('%s is not a dir' % args.save)
+    pertrubation(num_classes, net, c_p_dir)
+    e = True
+        
+  if e == False:
+    if args.scheduler == 'LambdaLR':
+      scheduler = torch.optim.lr_scheduler.LambdaLR(
+          optimizer,
+          lr_lambda=lambda step: get_lr(  # pylint: disable=g-long-lambda
+              step,
+              args.epochs * len(train_loader),
+              1,  # lr_lambda computes multiplicative factor
+              1e-6 / args.learning_rate))
+  
+    elif args.scheduler == 'CosineAnnealingLR':
+      scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, 
+      args.epochs * len(train_loader))
+    if not os.path.exists(args.save):
+      os.makedirs(args.save)
+    if not os.path.isdir(args.save):
+      raise Exception('%s is not a dir' % args.save)
 
-  log_path = os.path.join(args.save,
-                          args.dataset + '_' + args.model + '_training_log.csv')
-  with open(log_path, 'w') as f:
-    f.write('epoch,time(s),train_loss,test_loss,test_error(%)\n')
+    log_path = os.path.join(args.save,
+                            args.dataset + '_' + args.model + '_training_log.csv')
+    with open(log_path, 'w') as f:
+      f.write('epoch,time(s),train_loss,test_loss,test_error(%)\n')
 
-  best_acc = 0
-  print('Beginning training from epoch:', start_epoch + 1)
-  for epoch in range(start_epoch, args.epochs):
-    begin_time = time.time()
+    best_acc = 0
 
-    train_loss_ema = train(net, train_loader, optimizer, scheduler)
-    test_loss, test_acc = test(net, test_loader)
+    #summarywriter
+    writer = SummaryWriter(args.save)
+    print('Beginning training from epoch:', start_epoch + 1)
+    for epoch in range(start_epoch, args.epochs):
+      begin_time = time.time()
 
-    is_best = test_acc > best_acc
-    best_acc = max(test_acc, best_acc)
-    checkpoint = {
-        'epoch': epoch,
-        'dataset': args.dataset,
-        'model': args.model,
-        'state_dict': net.state_dict(),
-        'best_acc': best_acc,
-        'optimizer': optimizer.state_dict(),
-    }
+      train_loss_ema = train(net, train_loader, optimizer, scheduler)
+      test_loss, test_acc = test(net, test_loader)
 
-    save_path = os.path.join(args.save, 'checkpoint.pth.tar')
-    torch.save(checkpoint, save_path)
-    if is_best:
-      shutil.copyfile(save_path, os.path.join(args.save, 'model_best.pth.tar'))
+      writer.add_scalars('Loss',{'Training':train_loss_ema,'Testing':test_loss}, epoch)
+      writer.add_scalar('Training_loss/epochs',train_loss_ema, epoch)
+      writer.add_scalar('Test_loss/epochs',test_loss, epoch)
+      writer.add_scalar('Test_acc/epochs',test_acc, epoch)
+      
+      is_best = test_acc > best_acc
+      best_acc = max(test_acc, best_acc)
+      checkpoint = {
+          'epoch': epoch,
+          'dataset': args.dataset,
+          'model': args.model,
+          'state_dict': net.state_dict(),
+          'best_acc': best_acc,
+          'optimizer': optimizer.state_dict(),
+      }
 
+      save_path = os.path.join(args.save, 'checkpoint.pth.tar')
+      torch.save(checkpoint, save_path)
+      if is_best:
+        shutil.copyfile(save_path, os.path.join(args.save, 'model_best.pth.tar'))
+
+      with open(log_path, 'a') as f:
+        f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' % (
+            (epoch + 1),
+            time.time() - begin_time,
+            train_loss_ema,
+            test_loss,
+            100 - 100. * test_acc,
+        ))
+
+      print(
+          'Epoch {0:3d} | Time {1:5d} | Train Loss {2:.4f} | Test Loss {3:.3f} |'
+          ' Test Error {4:.2f}'
+          .format((epoch + 1), int(time.time() - begin_time), train_loss_ema,
+                  test_loss, 100 - 100. * test_acc))
+
+    writer.close()
+    test_c_acc = test_c(net, test_data, base_c_path)
+    print('Mean Corruption Error: {:.3f}'.format(100 - 100. * test_c_acc))
+
+  
     with open(log_path, 'a') as f:
-      f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' % (
-          (epoch + 1),
-          time.time() - begin_time,
-          train_loss_ema,
-          test_loss,
-          100 - 100. * test_acc,
-      ))
+      f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' %
+              (args.epochs + 1, 0, 0, 0, 100 - 100 * test_c_acc))
 
-    print(
-        'Epoch {0:3d} | Time {1:5d} | Train Loss {2:.4f} | Test Loss {3:.3f} |'
-        ' Test Error {4:.2f}'
-        .format((epoch + 1), int(time.time() - begin_time), train_loss_ema,
-                test_loss, 100 - 100. * test_acc))
+    #pertrubation
+    c_p_dir = './data/cifar/CIFAR-10-P'
 
-  test_c_acc = test_c(net, test_data, base_c_path)
-  print('Mean Corruption Error: {:.3f}'.format(100 - 100. * test_c_acc))
-
-  with open(log_path, 'a') as f:
-    f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' %
-            (args.epochs + 1, 0, 0, 0, 100 - 100 * test_c_acc))
-    
-  test_p_acc = test_p(net, test_data, base_p_path)
-  print('Mean Pertrubation Error: {:.3f}'.format(100 - 100. * test_p_acc))
-
-  with open(log_path, 'a') as f:
-    f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' %
-            (args.epochs + 1, 0, 0, 0, 100 - 100 * test_c_acc))
+    pertrubation(num_classes, net, c_p_dir)
 
 
 if __name__ == '__main__':
