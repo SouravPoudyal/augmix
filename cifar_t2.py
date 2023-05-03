@@ -142,8 +142,7 @@ parser.add_argument(
 parser.add_argument(
     '--save',
     type=str,
-    default='./snapshots/ckt_convnext_tiny_sgd_nonPretrained
-    ',
+    default='./snapshots/Cifar_10p_AdamW_CAlr_convnext_tiny_nPtr',
     help='Folder to save checkpoints.')
 
 parser.add_argument(
@@ -597,6 +596,11 @@ def main():
       train_loss_ema = train(net, train_loader, optimizer, scheduler)
       test_loss, test_acc = test(net, test_loader)
 
+      writer.add_scalars('Loss',{'Training':train_loss_ema,'Testing':test_loss}, epoch)
+      writer.add_scalar('Training_loss/epochs',train_loss_ema, epoch)
+      writer.add_scalar('Test_loss/epochs',test_loss, epoch)
+      writer.add_scalar('Test_acc/epochs',test_acc, epoch)
+      
       is_best = test_acc > best_acc
       best_acc = max(test_acc, best_acc)
       checkpoint = {
@@ -628,10 +632,11 @@ def main():
           .format((epoch + 1), int(time.time() - begin_time), train_loss_ema,
                   test_loss, 100 - 100. * test_acc))
 
+    writer.close()
     test_c_acc = test_c(net, test_data, base_c_path)
     print('Mean Corruption Error: {:.3f}'.format(100 - 100. * test_c_acc))
 
-
+  
     with open(log_path, 'a') as f:
       f.write('%03d,%05d,%0.6f,%0.5f,%0.2f\n' %
               (args.epochs + 1, 0, 0, 0, 100 - 100 * test_c_acc))
