@@ -4,27 +4,15 @@
 
 ## Introduction
 
-In this work model performance against change in data distribution was conducted to train the Rsnet18 and ConvNext-Tiny network with CIFAR-10 dataset with data augmentation technique using AugMix algorithm [ICLR 2020 paper](https://arxiv.org/pdf/1912.02781.pdf), and test on CIFAR-10, CIFAR-10C and CIFAR-10P.
+In this work model performance against change in data distribution was conducted to train the Resnet18 and ConvNext-Tiny network with CIFAR-10 dataset that is augmented using AugMix [ICLR 2020 paper](https://arxiv.org/pdf/1912.02781.pdf) data augmentation technique, and test on CIFAR-10, CIFAR-10C and CIFAR-10P.
 
 Objectives:
   1. To Train the ResNet18 and ConvNext Tiny model on CIFAR-10 and evaluate on CIFAR-10, CIFAR-10C and CIFAR-10P 
   2. Deploying both network with:
-        a. AdamW optimizer and CosineAnnealingLR learning rate scheduler.
-        b. SGD optimizer and LambdaLR learning rate scheduler.
-  3. Adding Tensorboard implementation to log Train and Test losses and deriving conclusion form the results
-  4. Hyper parameter Tuning  of the network to improve its performance.
-
-## Contents
-
-This directory includes a reference implementation in NumPy of the augmentation
-method used in AugMix in `augment_and_mix.py`. The full AugMix method also adds
-a Jensen-Shanon Divergence consistency loss to enforce consistent predictions
-between two different augmentations of the input image and the clean image
-itself.
-
-We also include PyTorch re-implementations of AugMix on both CIFAR-10/100 and
-ImageNet in `cifar.py` and `imagenet.py` respectively, which both support
-training and evaluation on CIFAR-10/100-C and ImageNet-C.
+        a. AdamW optimizer with CosineAnnealingLR learning rate scheduler.
+        b. SGD optimizer with LambdaLR learning rate scheduler.
+  3. Adding Tensorboard implementation to log Train and Test losses and deriving conclusion form the results.
+  4. Hyper parameter Tuning  of the model to improve its performance.
 
 ## Requirements
 
@@ -50,9 +38,9 @@ training and evaluation on CIFAR-10/100-C and ImageNet-C.
 
 Training recipes used in our paper:
 
-Resnet18(non-pretrained and non pretrained with SGD and LambdaLR): `python new_cifar.py -m renset18` or `python new_cifar.py -m renset18 -pt` 
+Resnet18(non-pretrained or pretrained with SGD + LambdaLR): `python new_cifar.py -m renset18` or `python new_cifar.py -m renset18 -pt` 
 
-Convnext-Tiny(non-pretrained and non pretrained with Adam and CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
+Convnext-Tiny(non-pretrained or pretrained with Adam + CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
 
 Similarly Learning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
 
@@ -67,7 +55,7 @@ Similarly Learning rate and weight decay could be included in the receipe with f
 
 ## Conclusion
 
-In this work model performance against change in data distribution was conducted to train the Rsnet18 and ConvNext-Tiny network with CIFAR-10 dataset with data augmentation technique using AugMix algorithm and test on CIFAR-10, CIFAR-10C and CIFAR-10P. Non Pretrained Resnet18 model performed best with SGD and LambdaLR scheduler with Test error of 11.53% and mCE of 16.861%, and mFP of 0.02320 and Pretrained Convnext-Tiny model best performed with AdamW optimizer and CosineAnnealingLR scheduler with inital Learning rate of 0.0001 and weight decay of 0.00001, with Test error of 7.65%, mCE 13.071% and mFP of 0.01995, furthermore it was seen that lowering the learning rate and weight decay improved the model performance, therefore it is possible to achieve more accuracy with Convnext-Tiny model, which could be a topic of further work, also in the model training performed in this work above it was seen that model seem to achieve convergence at around 96 epoch..As seen in the Mean Flip Probability Plot although the Test error and Mean corruption error(mCE) is decreasing the perturbation in the dataset has either no effect or slightly lower value, this means the perturbation in dataset is not quite significant effect with change in hyperparameter.
+Non Pretrained Resnet18 model performed best with SGD and LambdaLR scheduler with Test error of 11.53% and mCE of 16.861%, and mFP of 0.02320 and Pretrained Convnext-Tiny model best performed with AdamW optimizer and CosineAnnealingLR scheduler with inital Learning rate of 0.0001 and weight decay of 0.00001, with Test error of 7.65%, mCE 13.071% and mFP of 0.01995, furthermore it was seen that lowering the learning rate and weight decay improved the model performance, therefore it is possible to achieve more accuracy with Convnext-Tiny model, which could be a topic of further work, also in the model training performed in this work above it was seen that model seem to achieve convergence at around 96 epoch.As seen in the Mean Flip Probability Plot although the Test error and Mean corruption error(mCE) is decreasing as hyperparameter is changed, the perturbation in the dataset has either no effect or slightly lower value, this means the perturbation in dataset does not have significant effect on the model performance with change in hyperparameter.
 
 ## Citation
 
