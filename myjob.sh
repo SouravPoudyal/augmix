@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=gpu
-#SBATCH --job-name=Cifar_ckt_convnext_tiny-sgd-nonPretrained
-#SBATCH --output=Cifar_ckt_convnext_tiny-sgd-nonPretrained.out
+#SBATCH --job-name=Cifar_10p_SGD_LMlr_resnet18_Ptr
+#SBATCH --output=Cifar_10p_SGD_LMlr_resnet18_Ptr.out
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=sourav.poudyal@student.uni-siegen.de
 #SBATCH --nodes=1
@@ -13,4 +13,5 @@
 
 module load GpuModules
 module load pytorch-extra-py37-cuda11.2-gcc8/1.9.1
-python cifar_t2.py -m convnext_tiny -lr 0.001
+
+python cifar_t2.py -m resnet18 -pt 

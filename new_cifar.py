@@ -40,6 +40,7 @@ import torch
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 
+#from torch.utils.tensorboard import SummaryWriter
 from tensorboardX import SummaryWriter
 import torch.utils.model_zoo as model_zoo
 from torchvision.models import resnet
@@ -142,7 +143,7 @@ parser.add_argument(
 parser.add_argument(
     '--save',
     type=str,
-    default='./snapshots/Cifar_10p_AdamW_CAlr_convnext_tiny_nPtr',
+    default='./snapshots/Cifar_10p_SGD_LMlr_resnet18_Ptr',
     help='Folder to save checkpoints.')
 
 parser.add_argument(
