@@ -36,7 +36,7 @@ Objectives:
 
 ## Usage
 
-Training recipes used in our paper:
+Training recipes used in this work:
 
 Resnet18(non-pretrained or pretrained with SGD + LambdaLR): `python new_cifar.py -m renset18` or `python new_cifar.py -m renset18 -pt` 
 
