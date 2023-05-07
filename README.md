@@ -47,15 +47,15 @@ Training recipes used in our paper:
 
 Resnet18(non-pretrained and non pretrained with SGD and LambdaLR): `python new_cifar.py -m renset18` or `python new_cifar.py -m renset18 -pt` 
 
-Convnext-Tiny(non-pretrained and non pretrained with Adam and CosineAnnelingLR): 'python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR' and 'python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt'
+Convnext-Tiny(non-pretrained and non pretrained with Adam and CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
 
-Similarly Laearning rate and weight decay could be included int the receipe with flag '-lr' and '-wd'
+Similarly Laearning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
 
 ##Results
-<img align="center" src="assets/table_1.png" width="750">
-<img align="center" src="assets/table_2.png" width="750">
-<img align="center" src="assets/expt1_tab1.png" width="750">
-<img align="center" src="assets/expt2_rsu_tab2.png" width="750">
+<img align="center" src="assets/table_1.png" width="250">
+<img align="center" src="assets/table_5.png" width="250">
+<img align="center" src="assets/expt1_tab1.png" width="250">
+<img align="center" src="assets/expt2_rsu_tab2.png" width="250">
 
 
 ## Conclusion
