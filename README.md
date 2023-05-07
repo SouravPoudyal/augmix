@@ -9,8 +9,8 @@ In this work model performance against change in data distribution was conducted
 Objectives:
   1. To Train the ResNet18 and ConvNext Tiny model on CIFAR-10 and evaluate on CIFAR-10, CIFAR-10C and CIFAR-10P 
   2. Deploying both network with:
-        a. AdamW optimizer with CosineAnnealingLR learning rate scheduler.
-        b. SGD optimizer with LambdaLR learning rate scheduler.
+        a) AdamW optimizer with CosineAnnealingLR learning rate scheduler.
+        b) SGD optimizer with LambdaLR learning rate scheduler.
   3. Adding Tensorboard implementation to log Train and Test losses and deriving conclusion form the results.
   4. Hyper parameter Tuning  of the model to improve its performance.
 
