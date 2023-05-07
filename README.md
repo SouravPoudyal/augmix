@@ -6,8 +6,13 @@
 
 In this work model performance against change in data distribution was conducted to train the Rsnet18 and ConvNext-Tiny network with CIFAR-10 dataset with data augmentation technique using AugMix algorithm [ICLR 2020 paper](https://arxiv.org/pdf/1912.02781.pdf), and test on CIFAR-10, CIFAR-10C and CIFAR-10P.
 
-
-## Pseudocode
+Objectives:
+  1. To Train the ResNet18 and ConvNext Tiny model on CIFAR-10 and evaluate on CIFAR-10, CIFAR-10C and CIFAR-10P 
+  2. Deploying both network with:
+        a. AdamW optimizer and CosineAnnealingLR learning rate scheduler.
+        b. SGD optimizer and LambdaLR learning rate scheduler.
+  3. Adding Tensorboard implementation to log Train and Test losses and deriving conclusion form the results
+  4. Hyper parameter Tuning  of the network to improve its performance.
 
 ## Contents
 
@@ -49,7 +54,7 @@ Resnet18(non-pretrained and non pretrained with SGD and LambdaLR): `python new_c
 
 Convnext-Tiny(non-pretrained and non pretrained with Adam and CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
 
-Similarly Laearning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
+Similarly Learning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
 
 ##Results
 
