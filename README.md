@@ -52,10 +52,11 @@ Convnext-Tiny(non-pretrained and non pretrained with Adam and CosineAnnelingLR):
 Similarly Laearning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
 
 ##Results
-<img align="center" src="assets/table_1.png" width="250">
-<img align="center" src="assets/table_5.png" width="250">
-<img align="center" src="assets/expt1_tab1.png" width="250">
-<img align="center" src="assets/expt2_rsu_tab2.png" width="250">
+<img align="center" src="assets/table_1.png" width="450">
+<img align="center" src="assets/table_5.png" width="450">
+<img align="center" src="assets/expt1_tab1.png" width="450">
+<img align="center" src="assets/expt2_rsu_tab2.png" width="450">
+<img align="center" src="assets/mFP.png" width="450">
 
 
 ## Conclusion
