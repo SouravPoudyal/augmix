@@ -29,9 +29,8 @@ Objectives:
     pip install -r requirements.txt
     ```
 2. In this work [timm](https://github.com/huggingface/pytorch-image-models.git) and [torchvisionX](https://github.com/lanpa/tensorboardX.git) library are also      included.
-2. Download CIFAR-10-C datasets
+2. Download [CIFAR-10-C and CIFAR-10-P ](https://zenodo.org/record/2535967#.ZFi_xnbP23A)
 
- 3.  Download CIFAR-10-P datasets
  
 
 ## Usage
