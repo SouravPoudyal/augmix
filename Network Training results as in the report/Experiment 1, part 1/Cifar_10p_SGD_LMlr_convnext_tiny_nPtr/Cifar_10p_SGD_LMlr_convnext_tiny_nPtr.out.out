@@ -1,0 +1,1618 @@
+Bright Maschine Learning software stack loaded.
+Files already downloaded and verified
+Files already downloaded and verified
+Beginning training from epoch: 1
+Train Loss 0.249
+Train Loss 22919929717.445
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   1 | Time    37 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   2 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   3 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   4 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   5 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   6 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   7 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   8 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch   9 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  10 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  11 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  12 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  13 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  14 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  15 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  16 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  17 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  18 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  19 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  20 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  21 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  22 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  23 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  24 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  25 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  26 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  27 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  28 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  29 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  30 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  31 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  32 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  33 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  34 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  35 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  36 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  37 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  38 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  39 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  40 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  41 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  42 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  43 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  44 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  45 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  46 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  47 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  48 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  49 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  50 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  51 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  52 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  53 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  54 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  55 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  56 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  57 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  58 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  59 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  60 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  61 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  62 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  63 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  64 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  65 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  66 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  67 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  68 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  69 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  70 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  71 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  72 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  73 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  74 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  75 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  76 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  77 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  78 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  79 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  80 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  81 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  82 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  83 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  84 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  85 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  86 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  87 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  88 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  89 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  90 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  91 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  92 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  93 | Time    36 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  94 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  95 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  96 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  97 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  98 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch  99 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+Train Loss nan
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+NaN or Inf found in input tensor.
+Epoch 100 | Time    35 | Train Loss nan | Test Loss nan | Test Error 90.00
+(50000, 32, 32, 3)
+gaussian_noise
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+shot_noise
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+impulse_noise
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+defocus_blur
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+glass_blur
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+motion_blur
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+zoom_blur
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+snow
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+frost
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+fog
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+brightness
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+contrast
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+elastic_transform
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+pixelate
+	Test Loss nan | Test Error 90.000
+(50000, 32, 32, 3)
+jpeg_compression
+	Test Loss nan | Test Error 90.000
+Mean Corruption Error: 90.000
+
+brightness Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+gaussian_blur Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+gaussian_noise Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+motion_blur Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+rotate Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+scale Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+shot_noise Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+snow Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+spatter Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+speckle_noise Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+tilt Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+translate Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+
+zoom_blur Flipping Prob
+0.0
+Top5 Distance	0.00000
+Zipf Distance	0.00000
+flip_list [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Mean Flipping Prob	0.00000
