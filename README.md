@@ -23,13 +23,13 @@ Objectives:
 
 ## Setup
 
-1.  Install PyTorch and other required python libraries with:
+1. Install PyTorch and other required python libraries with:
 
     ```
     pip install -r requirements.txt
     ```
-
-2.  Download CIFAR-10-C datasets
+2. In this work [timm](https://github.com/huggingface/pytorch-image-models.git) and [torchvisionX](https://github.com/lanpa/tensorboardX.git) library are also      included.
+2. Download CIFAR-10-C datasets
 
  3.  Download CIFAR-10-P datasets
  
@@ -43,6 +43,7 @@ Resnet18(non-pretrained or pretrained with SGD + LambdaLR): `python new_cifar.py
 Convnext-Tiny(non-pretrained or pretrained with Adam + CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
 
 Similarly Learning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
+
 
 ##Results
 
