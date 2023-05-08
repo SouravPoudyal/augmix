@@ -59,8 +59,6 @@ Non Pretrained Resnet18 model performed best with SGD and LambdaLR scheduler wit
 
 ## Citation
 
-If you find this useful for your work, please consider citing
-
 ```
 @article{hendrycks2020augmix,
   title={{AugMix}: A Simple Data Processing Method to Improve Robustness and Uncertainty},
@@ -68,4 +66,24 @@ If you find this useful for your work, please consider citing
   journal={Proceedings of the International Conference on Learning Representations (ICLR)},
   year={2020}
 }
+@misc{tensorboardX,
+  author = {Tzu-Wei Huang},
+  title = {tensorboardX},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/lanpa/tensorboardX.git}},
+  commit = {5c03c643d8c4fefdd4ed493326baa7b1ed085662}
+}
+
+@misc{rw2019timm,
+  author = {Ross Wightman},
+  title = {PyTorch Image Models},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  doi = {10.5281/zenodo.4414861},
+  howpublished = {\url{https://github.com/rwightman/pytorch-image-models}}
+}
+
 ```
