@@ -23,15 +23,14 @@ Objectives:
 
 ## Setup
 
-1.  Install PyTorch and other required python libraries with:
+1. Install PyTorch and other required python libraries with:
 
     ```
     pip install -r requirements.txt
     ```
+2. In this work [timm](https://github.com/huggingface/pytorch-image-models.git) and [torchvisionX](https://github.com/lanpa/tensorboardX.git) library are also      included.
+2. Download [CIFAR-10-C and CIFAR-10-P ](https://zenodo.org/record/2535967#.ZFi_xnbP23A)
 
-2.  Download CIFAR-10-C datasets
-
- 3.  Download CIFAR-10-P datasets
  
 
 ## Usage
@@ -43,6 +42,7 @@ Resnet18(non-pretrained or pretrained with SGD + LambdaLR): `python new_cifar.py
 Convnext-Tiny(non-pretrained or pretrained with Adam + CosineAnnelingLR):`python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR` and `python new_cifar.py -m convnext_tiny -o AdamW -s CosineAnnealingLR -pt`
 
 Similarly Learning rate and weight decay could be included in the receipe with flag `-lr` and `-wd`
+
 
 ##Results
 
@@ -59,8 +59,6 @@ Non Pretrained Resnet18 model performed best with SGD and LambdaLR scheduler wit
 
 ## Citation
 
-If you find this useful for your work, please consider citing
-
 ```
 @article{hendrycks2020augmix,
   title={{AugMix}: A Simple Data Processing Method to Improve Robustness and Uncertainty},
@@ -68,4 +66,24 @@ If you find this useful for your work, please consider citing
   journal={Proceedings of the International Conference on Learning Representations (ICLR)},
   year={2020}
 }
+@misc{tensorboardX,
+  author = {Tzu-Wei Huang},
+  title = {tensorboardX},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/lanpa/tensorboardX.git}},
+  commit = {5c03c643d8c4fefdd4ed493326baa7b1ed085662}
+}
+
+@misc{rw2019timm,
+  author = {Ross Wightman},
+  title = {PyTorch Image Models},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  doi = {10.5281/zenodo.4414861},
+  howpublished = {\url{https://github.com/rwightman/pytorch-image-models}}
+}
+
 ```
