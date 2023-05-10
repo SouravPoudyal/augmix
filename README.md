@@ -85,5 +85,12 @@ Non Pretrained Resnet18 model performed best with SGD and LambdaLR scheduler wit
   doi = {10.5281/zenodo.4414861},
   howpublished = {\url{https://github.com/rwightman/pytorch-image-models}}
 }
-
+@misc{robustness,
+  author = {Dan Hendrycks},
+  title = {robustness},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/hendrycks/robustness.git}}
+}
 ```
