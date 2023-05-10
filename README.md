@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this work model performance against change in data distribution was conducted to train the Resnet18 and ConvNext-Tiny network with CIFAR-10 dataset that is augmented using AugMix [ICLR 2020 paper](https://arxiv.org/pdf/1912.02781.pdf) data augmentation technique, and test on CIFAR-10, CIFAR-10C and CIFAR-10P.
+In this work model performance against change in data distribution was conducted to train the Resnet18 and ConvNext-Tiny network with CIFAR-10 dataset that is augmented using AugMix [ICLR 2020 paper](https://arxiv.org/pdf/1912.02781.pdf) data augmentation technique, and test on CIFAR-10, CIFAR-10C and CIFAR-10P, referrence repositories are [robustness](https://github.com/hendrycks/robustness.git) and [augmix](https://github.com/google-research/augmix.git)
 
 Objectives:
   1. To Train the ResNet18 and ConvNext Tiny model on CIFAR-10 and evaluate on CIFAR-10, CIFAR-10C and CIFAR-10P 
